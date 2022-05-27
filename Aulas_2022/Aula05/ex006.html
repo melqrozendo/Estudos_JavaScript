@@ -1,0 +1,122 @@
+<!--Aula 05 - Operadores em JavaScript
+
+Familia de operadores em JS
+-aritmeticos
+-atribuição
+-relacionais
+-lógicos
+-ternários
+
+Operadores Relacionais: o resultado da expressão é booleano(true or false)
+>       #maior que
+<       #menor que
+>=      #maior e igual
+<=      #menor e igual
+==      #igual
+!=      #diferente
+
+exemplos:
+5>2  =  true
+7<4  =  false      
+8>=8 =  true
+9<=7 =  false
+5==5 =  true
+4!=4 =  false
+
+Identidade: realizaçao de teste em JS(não testa o tipo primitivo)
+5 == 5      =   true
+5 == '5'    =   true    #JS não testa o tipo da variavel
+
+Operador Identidade restrita
+| === |
+exemplo: testando se a variavel é do mesmo valor e tipo
+5 === 5     = true
+5 === '5'   =   false
+
+Operador Desigual restrito
+| !== |
+exemplo: testando se a variavel é do mesmo valor e tipo
+var x = 5
+var y = '5'
+typeof x -> 'number'
+typeof y -> 'string'
+x == y   -> true
+x === y  -> false
+x != y   -> false
+x !== y  -> true        #tipos diferentes, porém com mesmo valor
+
+Operadores Lógicos
+!       #negação (NOT)
+&&      #conjunção (AND)
+||      #disjunção (OR)
+
+operador logico de negação(operador unario)
+!true   -> false
+!false  -> true
+
+operador logico de conjnção(operador binario)
+true  && true   -> true
+true  && false  -> false
+false && true   -> false
+false && false  -> false
+
+operador logico de conjnção(operador binario)
+true  || true   -> true
+true  || false  -> true
+false || true   -> true
+false || false  -> false
+
+exemplo:
+true && false -> false
+true && true  -> true
+false || false-> false
+
+Resolvendo operadores por ordem de precedência:
+Aritmeticos -> Relacionais -> Logicos 
+
+Resolvendo operadores Logicos por ordem de precedência:
+NOT -> AND -> OR
+
+exemplo1:
+var a = 5
+var b = 8
+a > b && b % 2 == 0     
+#resolvar operadores aritmeticos, depois os relacionais, depois os logicos
+b%2 == 0    #8%2 == 0   -> true
+a>b         #5>8        -> false
+false && true           -> false
+
+exemplo2:
+a <= b || b / 2 == 2     
+#resolvar operadores aritmeticos, depois os relacionais, depois os logicos
+b/2 == 2    #8/2 == 0   -> 4 == 0   -> false
+a<=b        #5<=8                   -> true
+false || true                       -> true
+
+exemplo3:
+idade >= 15 && idade <= 17          #a idade está entre 15 e 17?
+estado == 'RJ' || estado == 'SP'    #o estado é RJ ou SP?
+salário > 1500 && sexo != 'M'       #o salario é acima de 1500 e não é homem?
+
+Operadores Ternários
+?
+:
+dividido em três blocos
+-codigo de sintaxe:
+teste ? true : false
+
+exemplo1:
+var media = 5.5
+var media = media > 7 ? 'Aprovado' : 'Reprovado'    #5.5 > 7 -> false
+media -> 'Reprovado'
+
+exemplo2:
+var x = 8
+var res = x % 2 ==0 ? 5 : 9     #8%2 == 0 -> true
+res -> 5
+
+exemplo3:
+var idade = 19
+var r = idade >=18 ? 'MAIOR' : 'MENOR'      #19>=18 -> true
+r -> 'MAIOR'
+-->

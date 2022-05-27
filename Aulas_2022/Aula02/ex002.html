@@ -1,0 +1,68 @@
+<!--Aula 02 - variaveis e tipos primitivos
+
+conceito de Variaveis:
+armazenar espaço na memoria do computador
+#No JS moderno, alem de usar a palavra 'var', tbm podemos usar 'let'.
+-codigo de sintaxe:
+criando variaveis com numeros inteiros ou decimais
+<script>
+    var n1 = 2
+    var n2 = 3.5
+    var n3 = 5
+</script>
+criando variaveis com strings
+<script>
+    var s1 = "JavaScript"
+    var s2 = 'Curso em Vídeo'
+    var s3 = `Rozendo`
+</script>
+
+#Identificadores:
+-podemos começar com letra, $ ou _
+-não podem começar com numeros
+-é possivel usar letras ou numeros
+-é possivel usar acentos e símbolos -> var média = 5
+-não podem conter espaço
+-não podem ser palavras reservadas(function, alert, var)
+
+Tipos primitivos- Data types
+-number (5; 18;-12;0.5)
+    Infinity
+    NaN
+-string ("Google"; 'JavaScript'; `Rozendo`)
+-boolean (true; false)
+-null
+-undefined
+-object
+    Array
+-function
+
+Comando typeof: tipo de...
+-inserir comando no terminal do nodejs
+typeof n -> 'number'
+typeof 6 -> 'number'
+typeof [] -> 'object'
+typeof {} -> 'object'
+typeof function(){} -> 'function'
+typeof Infinity -> 'number'
+typeof NaN -> 'number'
+typeof null -> 'object'
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+</head>
+<body>
+    <script>
+        var n1 = 2
+        var n2 = 3
+        var soma = n1 + n2
+        window.alert("A soma entre "+n1+" e "+n2+" = "+soma)
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!--Aula 03 - tratamento de dados
+
+Outros comandos para Strings:
+var s = "JavaScript"
+s.length            #quantos caracteres a string tem
+s.toUpperCase()     #exibi string com letras maiusculas
+s.toLowerCase()     #exibi string com letras minusculas
+
+Formatando Strings
+-codigo de sintaxe:
+<script>
+    var nome = window.prompt("Digite seu nome: ")
+    document.write(`Usuário: ${nome.length}`)
+</script>
+
+Formatando Number
+-codigo de sintaxe:
+var n1 = 1545.5
+n1.toFixed(2)                   #exibir = 1545.50
+n1.toFixed(2).replace('.',',')  #exibir = 1545,50
+Formatando Number em valor monetario:
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var nome = window.prompt("Digite seu nome:")
+        document.write(`Olá, ${nome}. Usuário: Tem ${nome.length} letras.<br/>`)
+        document.write(`Olá, ${nome.toUpperCase()}. Usuário: Tem ${nome.length} letras.<br/>`)
+        document.write(`Bom dia, ${nome.toLowerCase()}!<br/>`)
+
+        var n1 = Number.parseFloat(window.prompt("Digite seu Salário:"))
+        document.write(n1.toFixed(2)+"<br/>")                   
+        document.write(n1.toFixed(2).replace('.',',')+"<br/>")  
+        document.write(`O salario de ${nome} é ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} reais. <br/>`)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!--Aula 03 - tratamento de dados
+
+Data types
+number
+string
+
+criando variavel tipo string
+-codigo de sintaxe:
+<script>
+    var nome = window.prompt("Digite o seu nome:")
+    window.alert("Usuário: "+nome)      #metodo de concatenação
+</script>
+criando variavel no prompt teremos apenas variavel do tipo string retornando, assim devemos declarar as variaveis tipo number
+-codigo de sintaxe:
+<script>
+    var n1 = window.prompt("Digite um número:")     #gera variavel tipo String
+    var n2 = window.prompt("Digite outro número:")  #gera variavel tipo String
+    var s = n1 + n2
+    window.alert("A soma do valores é: "+s)         #concatenação de String
+</script>
+
+Veja:
+(number + number) -> para adição
+(string + string) -> para concatenação
+
+Conversão de variaveis
+String -> Number
+Number.parseInt(n)
+Number.parseFloat(n)
+Number(n)
+
+-codigo de sintaxe:
+<script>
+    var n1 = Number.parseInt(window.prompt("Digite um número:"))
+    var n2 = Number.parseInt(window.prompt("Digite outro número:"))
+    var s = n1 + n2
+    window.alert("A soma do valores é: "+s)
+</script> 
+
+Number -> String
+String(n)
+n.toString()
+
+Formatando Strings
+var s = 'JavaScript'
+"Eu estou aprendendo s"     #não faz interpolação
+"Eu estou aprendendo "+s    #usa concatenação
+
+Formatando String usando template string
+`Eu estou aprendendo ${s}`  #usa template string com ${} place holder
+
+#perceba que para usar template string deve usar crase na string
+
+Outros comandos para Strings:
+var s = "JavaScript"
+s.length            #quantos caracteres a string tem
+s.toUpperCase()     #exibi string com letras maiusculas
+s.toLowerCase()     #exibi string com letras minusculas
+
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Digite seu nome:")
+        window.alert("Usuário: "+ nome)
+
+        var n1 = Number(window.prompt("Digite um valor:"))
+        var n2 = Number(window.prompt("Digite outro valor:"))
+        var soma = n1 + n2
+        //window.alert("A soma é: "+soma)
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`)
+    </script>
+    
+</body>
+</html>
